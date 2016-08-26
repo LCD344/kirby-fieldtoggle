@@ -1,0 +1,7 @@
+{
+  "name": "fieldtoggle",
+  "description": "Field Toggle With Switch Button For Kirby",
+  "author": "Nur Bar <nbfbce@ymail.com>",
+  "license": "MIT",
+  "type": "kirby-plugin"
+}

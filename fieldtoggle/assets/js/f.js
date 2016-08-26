@@ -1,56 +1,55 @@
-$(document).ready(function(){
-
+$(document).ready(function () {
+  
   function fieldtoggle() {
-
-    $(".fieldtoggle input:checked").each(function() {
-
+    
+    
+    $(".input-with-fieldtoggle input").each(function () {
+      
       var field = $(this).parent();
-
+      
       if (field.data("off")) {
         var off = field.data("off").toLowerCase().split(" ");
       }
       else {
         var off = [];
       }
-
+      
       if (field.data("on")) {
         var on = field.data("on").toLowerCase().split(" ");
       }
       else {
         var on = [];
       }
-
-      if ( $(this).attr("value") == "true" ) {
-        $.each(off, function(key, value) {
-          $(".field-name-" + value).closest(".field").hide();
+      
+      if ($(this).is(':checked')) {
+        $.each(off, function (key, value) {
+          $(".field-name-" + value).hide();
         });
-        $.each(on, function(key, value) {
-          $(".field-name-" + value).closest(".field").show();
+        $.each(on, function (key, value) {
+          $(".field-name-" + value).show();
+        });
+      } else {
+        $.each(off, function (key, value) {
+          $(".field-name-" + value).show();
+        });
+        $.each(on, function (key, value) {
+          $(".field-name-" + value).hide();
         });
       }
-
-      else if ($(this).attr("value") == "false") {
-       $.each(off, function(key, value) {
-         $(".field-name-" + value).closest(".field").show();
-       });
-       $.each(on, function(key, value) {
-         $(".field-name-" + value).closest(".field").hide();
-       });
-      }
-
+      
     });
-
+    
   }
-
+  
   fieldtoggle();
-
-  $("body").on("change", ".fieldtoggle input", function() {
+  
+  $("body").on("change", ".input-with-fieldtoggle input", function () {
     fieldtoggle();
   });
-
-
-  $(document).ajaxComplete(function() {
+  
+  
+  $(document).ajaxComplete(function () {
     fieldtoggle();
   });
-
+  
 });
