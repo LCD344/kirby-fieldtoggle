@@ -4,7 +4,11 @@ This field lets panel users toggle the visibility of other fields.
 
 ## Installation
 
-Simply put the `fieldtoggle` folder into your `site/fields` folder.
+Put the contents of the folder in the site/plugins/fieldtoggle folder of your project
+
+or using the kirby cli you can write
+    kirby plugin:install lcd344/kirby-fieldtoggle
+
 
 ## Examples
 
@@ -105,8 +109,6 @@ products:
 
 ## Additional comments
 
-You can use the regular `toggle` field option `text` which can either be `on/off` or `yes/no`. The value is the same: `true` or `false`.
+This Field is modeled after the checkbox field and it's value can recieved the same way the checkbox field is used.
 
 Fields with `required` set to `true` will be required, even if they're hidden.
-
-As of version 2.3, Kirby converts every field name to lowercase in the panel. There's no differentiation between `fieldName` and `fieldname`. Thanks to LCD344 for testing that.
