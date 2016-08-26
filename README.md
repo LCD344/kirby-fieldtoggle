@@ -7,8 +7,10 @@ This field lets panel users toggle the visibility of other fields.
 Put the contents of the folder in the site/plugins/fieldtoggle folder of your project
 
 or using the kirby cli you can write
-    kirby plugin:install lcd344/kirby-fieldtoggle
 
+````
+kirby plugin:install lcd344/kirby-fieldtoggle
+````
 
 ## Examples
 
